@@ -11,8 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm cache clean -f'
-                sh 'npm install'
+               sh 'npm install  --unsafe-perm=true --allow-root'
             }
         }
         stage('Test') {
